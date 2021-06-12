@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.use('/api', require('./routes/apiRoutes'))
 app.use('/', require('./routes/htmlRoutes'))
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/protected-inlet', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
